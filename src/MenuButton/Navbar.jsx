@@ -1,9 +1,10 @@
 import { menuItems } from '../menuItems';
 import MenuItems from './MenuItems';
+import css from "./MenuButton.module.css";
 const Navbar = () => {
   return (
     <nav>
-      <ul className="menus">
+      <ul className={css.menus}>
         {menuItems.map((menu, index) => {
           const depthLevel = 0;
           return (

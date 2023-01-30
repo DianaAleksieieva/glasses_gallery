@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Dropdown from './Dropdown';
+import css from "./MenuButton.module.css";
 
 import { Link } from 'react-router-dom';
 
@@ -41,7 +42,7 @@ const MenuItems = ({ items, depthLevel }) => {
 
   return (
     <li
-      className="menu-items"
+      className={css.menuItems}
       ref={ref}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -55,19 +56,20 @@ const MenuItems = ({ items, depthLevel }) => {
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            {window.innerWidth < 960 && depthLevel === 0 ? (
+            {/* {window.innerWidth < 960 && depthLevel === 0 ? (
               items.title
-            ) : (
+            ) : ( */}
               <Link to={items.url}>{items.title}</Link>
-            )}
+            {/* )} */}
 
-            {depthLevel > 0 &&
+            {/* {depthLevel > 0 &&
             window.innerWidth < 960 ? null : depthLevel > 0 &&
               window.innerWidth > 960 ? (
               <span>&raquo;</span>
             ) : (
-              <span className="arrow" />
-            )}
+              <span className={css.arrow} />
+            )} */}
+
           </button>
           <Dropdown
             depthLevel={depthLevel}
@@ -87,7 +89,7 @@ const MenuItems = ({ items, depthLevel }) => {
             {depthLevel > 0 ? (
               <span>&raquo;</span>
             ) : (
-              <span className="arrow" />
+              <span className={css.arrow}/>
             )}
           </button>
           <Dropdown

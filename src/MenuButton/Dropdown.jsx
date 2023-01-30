@@ -1,11 +1,13 @@
 import MenuItems from './MenuItems';
+import css from "./MenuButton.module.css";
+
 const Dropdown = ({ submenus, dropdown, depthLevel }) => {
   depthLevel = depthLevel + 1;
-  const dropdownClass = depthLevel > 1 ? 'dropdown-submenu' : '';
+  const dropdownClass = depthLevel > 1 ? css.dropdownSubmenu : '';
   return (
     <ul
-      className={`dropdown ${dropdownClass} ${
-        dropdown ? 'show' : ''
+      className={`${css.dropdown} ${dropdownClass} ${
+        dropdown ? css.show : ''
       }`}
     >
       {submenus.map((submenu, index) => (

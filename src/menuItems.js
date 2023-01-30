@@ -1,57 +1,36 @@
 export const menuItems = [
     {
-      title: 'Home',
+      title: 'MENU',
       url: '/',
-    },
-    {
-      title: 'Services',
-      url: '/services',
-      submenu: [
-        {
-          title: 'web design',
-          url: 'web-design',
-        },
-        {
-          title: 'web development',
-          url: 'web-dev',
           submenu: [
             {
-              title: 'Frontend',
-              url: 'frontend',
+              title: 'Sunglasses',
+              url: '/sunglasses',
+                submenu: [
+                  {
+                  title: 'Men',
+                  url: '/sunglasses-men',
+                  },
+                  {
+                title: 'Women',
+                url: '/sunglasses-women',
+                  },
+                ],
             },
             {
-              title: 'Backend',
+              title: 'Spectacles',
+              url: '/spectacles',
               submenu: [
                 {
-                  title: 'NodeJS',
-                  url: 'node',
+                  title: 'Men',
+                  url: '/spectacles=men',
                 },
                 {
-                  title: 'PHP',
-                  url: 'php',
+                  title: 'Women',
+                  url: '/spectacles-women',
                 },
-              ],
-            },
           ],
         },
-        {
-          title: 'SEO',
-          url: 'seo',
-        },
-      ],
-    },
-    {
-      title: 'About',
-      url: '/about',
-      submenu: [
-        {
-          title: 'Who we are',
-          url: 'who-we-are',
-        },
-        {
-          title: 'Our values',
-          url: 'our-values',
-        },
-      ],
-    },
-  ];
+  ]
+}
+]
