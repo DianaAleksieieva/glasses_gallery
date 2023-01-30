@@ -1,0 +1,17 @@
+.AppLogo {
+    width: 138px;
+    margin-right: calc(50vw - 69px);
+  }
+  
+  
+  .AppHeader {
+    z-index: 10010;
+    /* position: fixed; */
+    min-height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    border: 1px solid #000;
+  }

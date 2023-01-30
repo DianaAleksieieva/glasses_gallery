@@ -1,0 +1,25 @@
+{
+  "collections": [
+    {
+      "id": 4,
+      "name": "Sunglasses Men",
+      "configuration_name": "sunglasses-men"
+    },
+    {
+      "id": 3,
+      "name": "Sunglasses Women",
+      "configuration_name": "sunglasses-women"
+    },
+    {
+      "id": 2,
+      "name": "Spectacles Men",
+      "configuration_name": "spectacles-men"
+    },
+    {
+      "id": 1,
+      "name": "Spectacles Women",
+      "configuration_name": "spectacles-women"
+    }
+  ],
+  "meta": { "total_count": 4 }
+}
