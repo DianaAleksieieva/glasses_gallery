@@ -2,10 +2,12 @@ import css from './Header.module.css';
 import logo from "../logo.svg";
 import MenuButton from ".././MenuButton/MenuButton";
 
+import Navbar from '.././MenuButton/Navbar';
+
 const Header = () => {
     
     return (<header className={css.AppHeader}>
-        <MenuButton />
+        <Navbar />
         <img src={logo} className={css.AppLogo} alt="logo" />
       </header>)
 }
