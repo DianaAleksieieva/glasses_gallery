@@ -2,11 +2,11 @@ import GlassesList from "./GlassesList/GlassesList"
 import GlassesHead from "./GlassesHead/GlassesHead"
 
 
-const GlassesView = () => {
+const GlassesView = ({name}) => {
     
     
     return (<div>
-        <GlassesHead />
+        <GlassesHead name={name} />
         <GlassesList />
     </div>)
 }

@@ -1,23 +1,33 @@
 import React, { useState,useEffect } from "react";
 import GlassesCard from ".././GlassesCard/GlassesCard";
+import { useLocation } from 'react-router-dom';
 import css from "./GlassesList.module.css";
 import {
   getGlassesInfo,
+  getByColour,
 } from '../../api/glassesViewAPI';
 
-const GlassesList = (glasses) => {
+const GlassesList = () => {
   const [glassesInfo, setGlassesInfo] = useState('');
+  const [colour, setColour] = useState('coloured');
+  const location = useLocation();
 
   useEffect(() => {
-    if (!glasses) {
-      return;
-    }
     async function fetchData() {
-      const data = await getGlassesInfo();
+      const data = await getGlassesInfo(location.pathname);
       setGlassesInfo(data);
     }
     fetchData();
-  }, [glasses]);
+  }, [location]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getByColour(colour);
+      setGlassesInfo(data);
+    }
+    fetchData();
+  }, [colour]);
+
 
   return (
     <ul className={css.GlassesList}>

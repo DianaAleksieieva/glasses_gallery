@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 import basicCSS from "../.././App.module.css";
 import css from "./GlassesHead.module.css"
+import ColourChoiseMenu from "./ColourChoiseMenu.jsx"
 
-const GlassesHead = () => {
-    const [name, setName] = useState('SPECTACLES WOMEN');
-    
+const GlassesHead = ({name}) => {
+  const [isColorMenuOpen, setIsColorMenuOpen] = useState(false);
+  
+  const openColorMenu = () => {
+    setIsColorMenuOpen(!isColorMenuOpen);
+ };
+
+
   return (
     <div className={css.GlassesHead}>
       <p className={css.pageName}> {name} </p>
-      <a type="botton" className={basicCSS.Button} href="/">
+      <button type="button" className={basicCSS.Button} onClick={openColorMenu}>
         COLOUR
-      </a>
+      </button>
+
+      {isColorMenuOpen && <ColourChoiseMenu/>}
       <a type="botton" className={basicCSS.Button} href="/"> SHAPE </a>
     </div>
   );

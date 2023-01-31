@@ -1,11 +1,11 @@
 export const menuItems = [
     {
       title: 'MENU',
-      url: '/',
+      url: '#',
           submenu: [
             {
               title: 'Sunglasses',
-              url: '/sunglasses',
+              url: '/sunglasses-women',
                 submenu: [
                   {
                   title: 'Men',
@@ -23,7 +23,7 @@ export const menuItems = [
               submenu: [
                 {
                   title: 'Men',
-                  url: '/spectacles=men',
+                  url: '/spectacles-men',
                 },
                 {
                   title: 'Women',

@@ -29,11 +29,11 @@ const MenuItems = ({ items, depthLevel }) => {
   }, [dropdown]);
 
   const onMouseEnter = () => {
-    window.innerWidth > 960 && setDropdown(true);
+     setDropdown(true);
   };
 
   const onMouseLeave = () => {
-    window.innerWidth > 960 && setDropdown(false);
+     setDropdown(false);
   };
 
   const closeDropdown = () => {
@@ -56,20 +56,7 @@ const MenuItems = ({ items, depthLevel }) => {
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            {/* {window.innerWidth < 960 && depthLevel === 0 ? (
-              items.title
-            ) : ( */}
               <Link to={items.url}>{items.title}</Link>
-            {/* )} */}
-
-            {/* {depthLevel > 0 &&
-            window.innerWidth < 960 ? null : depthLevel > 0 &&
-              window.innerWidth > 960 ? (
-              <span>&raquo;</span>
-            ) : (
-              <span className={css.arrow} />
-            )} */}
-
           </button>
           <Dropdown
             depthLevel={depthLevel}

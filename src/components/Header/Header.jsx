@@ -1,5 +1,5 @@
 import css from './Header.module.css';
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
 import Navbar from '.././MenuButton/Navbar';
 
 const Header = () => {
