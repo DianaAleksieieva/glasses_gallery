@@ -3,16 +3,15 @@ import css from "./GlassesHead.module.css";
 
 const ColourChoiseMenu = () => {
   const [currentColour, setCurrentColour] = useState('colored');
-  const handleColour = (colour) => {
-    console.log()
-    setCurrentColour(colour)
- };
+//   const handleColour = (colour) => {
+//     setCurrentColour(colour)
+//  };
 
   return (
     <div className={css.ColourChoiseMenu}>
       <ul className={css.ColorChoiseList}>
         <li className={css.ColorChoiseItem} >
-          <button className={css.ColorButton} onklick={handleColour}>
+          <button className={css.ColorButton}>
           <div
           className={css.ColorChoiseIco}
             style={{
