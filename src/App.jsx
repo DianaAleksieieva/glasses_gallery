@@ -1,11 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 
-
 function App() {
-
   return (
-
        <Routes>
         <Route exact  path="/" element={<Layout name={'Spectacles Women'} />}>
           <Route index path="/spectacles-women" element={<Layout/>} />

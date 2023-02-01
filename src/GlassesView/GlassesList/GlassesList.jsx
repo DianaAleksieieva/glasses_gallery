@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, useContext } from "react";
 import GlassesCard from ".././GlassesCard/GlassesCard";
 import { useLocation } from 'react-router-dom';
 import css from "./GlassesList.module.css";
@@ -7,10 +7,12 @@ import {
   getByColour,
 } from '../../api/glassesViewAPI';
 
+
 const GlassesList = () => {
   const [glassesInfo, setGlassesInfo] = useState('');
   const [colour, setColour] = useState('coloured');
   const location = useLocation();
+
 
   useEffect(() => {
     async function fetchData() {
