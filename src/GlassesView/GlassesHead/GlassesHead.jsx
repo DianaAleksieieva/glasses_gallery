@@ -19,7 +19,7 @@ const GlassesHead = ({name}) => {
       </button>
 
       {isColorMenuOpen && <ColourChoiseMenu/>}
-      <a type="botton" className={basicCSS.Button} href="/"> SHAPE </a>
+      <button type="button" style={{cursor: 'default'}} disabled className={basicCSS.Button} href="/"> SHAPE </button>
     </div>
   );
 };

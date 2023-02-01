@@ -6,13 +6,12 @@ import {
   getGlassesInfo,
   getByColour,
 } from '../../api/glassesViewAPI';
-
+import {ClourContext} from ".././GlassesView"
 
 const GlassesList = () => {
   const [glassesInfo, setGlassesInfo] = useState('');
-  const [colour, setColour] = useState('coloured');
   const location = useLocation();
-
+  const {currentColour, setCurrentColour} = useContext(ClourContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -24,11 +23,12 @@ const GlassesList = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await getByColour(colour);
+      const data = await getByColour(currentColour);
+      console.log(data)
       setGlassesInfo(data);
     }
     fetchData();
-  }, [colour]);
+  }, [currentColour]);
 
 
   return (
