@@ -10,7 +10,6 @@ const Layout = () =>  {
         <>
       <Header/>
       <GlassesView name={Name} />
-
       </> )}
 
 export default Layout;

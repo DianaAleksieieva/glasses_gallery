@@ -5,14 +5,18 @@ import css from "./GlassesList.module.css";
 import {
   getGlassesInfo,
   getByColour,
+  getByShape
 } from '../../api/glassesViewAPI';
 import {ClourContext} from ".././GlassesView"
+import {ShapeContext} from ".././GlassesView"
 
 const GlassesList = () => {
   const [glassesInfo, setGlassesInfo] = useState('');
   const location = useLocation();
   const {currentColour, setCurrentColour} = useContext(ClourContext);
+  const {currentShape, setCurrentShape} = useContext(ShapeContext);
 
+  
   useEffect(() => {
     async function fetchData() {
       const data = await getGlassesInfo(location.pathname);
@@ -28,6 +32,14 @@ const GlassesList = () => {
     }
     fetchData();
   }, [currentColour]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getByShape(currentShape);
+      setGlassesInfo(data);
+    }
+    fetchData();
+  }, [currentShape]);
 
 
   return (

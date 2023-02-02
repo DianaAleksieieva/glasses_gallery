@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import basicCSS from "../.././App.module.css";
-import css from "./GlassesHead.module.css"
-import ColourChoiseMenu from "../ColourChoiseButtons/ColourChoiseMenu.jsx"
+import css from "./GlassesHead.module.css";
+import ColourChoiseMenu from "../ColourChoiseButtons/ColourChoiseMenu.jsx";
+import ShapeChoiseMenu from "../ShapeChoiseButtons/ShapeChoiseMenu.jsx";
 
-const GlassesHead = ({name}) => {
+const GlassesHead = ({ name }) => {
   const [isColorMenuOpen, setIsColorMenuOpen] = useState(false);
-  
+  const [isShapeMenuOpen, setIsShapeMenuOpen] = useState(false);
+
   const openColorMenu = () => {
     setIsColorMenuOpen(!isColorMenuOpen);
- };
-
+  };
+  const openShapeMenu = () => {
+    setIsShapeMenuOpen(!isShapeMenuOpen);
+  };
 
   return (
     <div className={css.GlassesHead}>
@@ -18,9 +22,18 @@ const GlassesHead = ({name}) => {
         COLOUR
       </button>
 
-      {isColorMenuOpen && <ColourChoiseMenu/>}
-      <button type="button" style={{cursor: 'default'}} disabled className={basicCSS.Button} href="/"> SHAPE </button>
+      {isColorMenuOpen && <ColourChoiseMenu />}
+      <button
+        type="button"
+        className={basicCSS.Button}
+        onClick={openShapeMenu}
+      >
+        SHAPE
+      </button>
+      {isShapeMenuOpen && <ShapeChoiseMenu />}
     </div>
   );
 };
-export default GlassesHead
+export default GlassesHead;
+
+// style={{cursor: 'default'}} disabled
