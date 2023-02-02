@@ -5,16 +5,23 @@
 }
 .ColorChoise {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
 }
 
 .ColorImg {
-  width: 50px;
-  height: 50px;
+  height: 40px;
+  width: 40px;
   display: block;
   border: 1px solid #000;
 }
 
 .GlassesCard {
+  align-items: stretch;
+  text-align: center;
   box-sizing: border-box;
   display: block;
   border: solid 1px;
@@ -22,7 +29,8 @@
   padding: 0;
   width: calc(100vw / 3);
 }
-/* 
-.GlassesCard:nth-child(3n) {
-  margin-right: 0px;
-} */
+
+.GlassesIMG {
+  display: block;
+  width: 451px;
+}

@@ -24,7 +24,6 @@ const GlassesList = () => {
   useEffect(() => {
     async function fetchData() {
       const data = await getByColour(currentColour);
-      console.log(data)
       setGlassesInfo(data);
     }
     fetchData();

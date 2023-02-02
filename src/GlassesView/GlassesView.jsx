@@ -6,7 +6,6 @@ export const ClourContext = createContext('colored');
 
 const GlassesView = ({name}) => {
       const [currentColour, setCurrentColour] = useState('coloured');
-      console.log(currentColour)
     
     
     return (<ClourContext.Provider value={{currentColour,setCurrentColour}}>

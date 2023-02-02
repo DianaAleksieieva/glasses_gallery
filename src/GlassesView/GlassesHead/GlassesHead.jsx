@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import basicCSS from "../.././App.module.css";
 import css from "./GlassesHead.module.css"
-import ColourChoiseMenu from "./ColourChoiseMenu.jsx"
+import ColourChoiseMenu from "../ColourChoiseButtons/ColourChoiseMenu.jsx"
 
 const GlassesHead = ({name}) => {
   const [isColorMenuOpen, setIsColorMenuOpen] = useState(false);

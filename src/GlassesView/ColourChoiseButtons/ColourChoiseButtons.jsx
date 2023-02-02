@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./GlassesHead.module.css";
+import css from "./ColourChoise.module.css";
 
 const ColourChoiseButtons = ({handleColour}) => {
   return (

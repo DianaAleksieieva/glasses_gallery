@@ -1,5 +1,5 @@
 import React, { useContext  } from 'react';
-import css from "./GlassesHead.module.css";
+import css from "./ColourChoise.module.css";
 import ColourChoiseButtons from "./ColourChoiseButtons"
 import {ClourContext} from "../GlassesView"
 

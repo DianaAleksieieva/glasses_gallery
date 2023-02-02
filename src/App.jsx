@@ -9,7 +9,7 @@ function App() {
           <Route path="/spectacles-men" element={<Layout name={'Spectacles Men'} />} />
           <Route path="/sunglasses-women" element={<Layout name={'Sunglasses Women'} />} />
           <Route path="/sunglasses-men" element={<Layout name={'Sunglasses Men'} />} />
-          {/* <Route path="*" element={<p>Not found!</p>} /> */}
+          <Route path="*" element={<p>Not found!</p>} />
         </Route>
       </Routes>
 
